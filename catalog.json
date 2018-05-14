@@ -1,0 +1,23 @@
+{
+  "id": "EAE1862A-4A79-405C-A902-EE85B4016F34",
+  "name": "a.appdynamics",
+  "description": "AppDynamics service provides access to shared instance of this APM",
+  "bindable": true,
+  "metadata": {
+    "displayName": "AppDynamics",
+    "documentationUrl": "https://docs.appdynamics.com/",
+    "imageUrl": "https://www.appdynamics.com/media/uploaded-images/1522789325/.thumbnails/appd-logo-340x0_q100.png"
+  },
+  "plan_updateable": false,
+  "plans": [
+    {
+      "id": "1C664C3E-D320-4F48-9807-0DE64AB4B155",
+      "name": "standard",
+      "description": "AppDynamics service provides access to shared instance of this APM",
+      "free": true,
+      "metadata": {
+        "displayName": "AppDynamics"
+      }
+    }
+  ]
+}

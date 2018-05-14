@@ -1,0 +1,16 @@
+---
+applications:
+- name: appdynamics-broker
+  buildpack: go_buildpack
+  memory: 256M
+  disk_quota: 256M
+  env:
+    GOVERSION: go1.10
+    GOPACKAGENAME: github.com/Infra-Red/cf-appdynamics-broker
+    GO_INSTALL_PACKAGE_SPEC: github.com/Infra-Red/cf-appdynamics-broker/cmd/appdynamics-broker
+    BROKER_USERNAME: admin
+    BROKER_PASSWORD: admin
+    APPDYNAMICS_HOST:
+    APPDYNAMICS_PORT:
+    APPDYNAMICS_ACCOUNT_ACCESS_KEY:
+    APPDYNAMICS_ACCOUNT_NAME:
