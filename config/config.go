@@ -9,6 +9,7 @@ type Specification struct {
 	AppDynamicsHost             string `envconfig:"appdynamics_host" required:"true"`
 	AppDynamicsNodeName         string `envconfig:"appdynamics_node_name" default:""`
 	AppDynamicsPort             string `envconfig:"appdynamics_port" required:"true"`
+	AppDynamicsSSLEnabled       bool   `envconfig:"appdynamics_ssl_enabled" required:"true"`
 	AppDynamicsTierName         string `envconfig:"appdynamics_tier_name" default:""`
 	BrokerPassword              string `envconfig:"broker_password" required:"true"`
 	BrokerUsername              string `envconfig:"broker_username" required:"true"`

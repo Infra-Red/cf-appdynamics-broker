@@ -13,6 +13,7 @@ type APPD struct {
 	host             string
 	nodeName         string
 	port             string
+	sslEnabled       bool
 	tierName         string
 }
 
@@ -36,6 +37,7 @@ func New(env config.Specification) (*APPD, error) {
 		host:             env.AppDynamicsHost,
 		nodeName:         env.AppDynamicsNodeName,
 		port:             env.AppDynamicsPort,
+		sslEnabled:       env.AppDynamicsSSLEnabled,
 		tierName:         env.AppDynamicsTierName,
 	}, nil
 }
@@ -48,7 +50,7 @@ func (b *APPD) CreateConnection(ctx context.Context) (*Credentials, error) {
 		Name:      b.accountName,
 		NodeName:  b.nodeName,
 		Port:      b.port,
-		SSL:       false,
+		SSL:       b.sslEnabled,
 		TierName:  b.tierName,
 	}, nil
 }
