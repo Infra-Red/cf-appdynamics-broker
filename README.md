@@ -11,6 +11,7 @@ There are important environment variables that should be overriden inside the ma
 * `APPDYNAMICS_PORT` **(required)** : The controller port.
 * `APPDYNAMICS_ACCOUNT_ACCESS_KEY` **(required)** : The account access key to use when authenticating with the controller.
 * `APPDYNAMICS_ACCOUNT_NAME` **(required)** : The account name to use when authenticating with the controller.
+* `APPDYNAMICS_SSL_ENABLED` **(required)** : Whether or not to use an SSL connection to the controller.
 * `APPDYNAMICS_APP_NAME` **(optional)** : The application's name.
 * `APPDYNAMICS_NODE_NAME` **(optional)** : The application's node name.
 * `APPDYNAMICS_TIER_NAME` **(optional)** : The application's tier name.
