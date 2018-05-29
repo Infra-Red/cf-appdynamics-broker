@@ -15,3 +15,6 @@ applications:
     APPDYNAMICS_ACCOUNT_ACCESS_KEY:
     APPDYNAMICS_ACCOUNT_NAME:
     APPDYNAMICS_SSL_ENABLED: false
+    APPDYNAMICS_APP_NAME: $(ruby -e "require 'json' ; if ENV['APPDYNAMICS_APP_NAME'].to_s.strip.empty? then a = JSON.parse(ENV['VCAP_APPLICATION']) else a = ENV['APPDYNAMICS_APP_NAME'] end; if ENV['APPDYNAMICS_APP_NAME'].to_s.strip.empty? then puts \"#{a['application_name']}\" else puts a end;")
+    APPDYNAMICS_NODE_NAME: $(ruby -e "require 'json' ; a = JSON.parse(ENV['VCAP_APPLICATION']);puts \"#{a['application_name']}:#{a['instance_index']}\"")
+    APPDYNAMICS_TIER_NAME: $(ruby -e "require 'json' ; a = JSON.parse(ENV['VCAP_APPLICATION']);puts \"#{a['application_name']}:#{a['space_name']}\"")
